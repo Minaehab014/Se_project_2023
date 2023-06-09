@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Navbar Example</title>
+  <style>
+   
+    .navbar {
+      background-color: #333;
+      padding: 20px;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar li {
+      margin-right: 10px;
+    }
+
+    .navbar li:last-child {
+      margin-right: 0;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #ffffff;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    .navbar a:hover {
+      background-color: #dedede;
+      color: #696060;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="/refund">Refund</a></li>
+      <li><a href="/senior">Senior Request</a></li>
+
+    </ul>
+  </nav>
+
+  
+
+</body>
+</html>

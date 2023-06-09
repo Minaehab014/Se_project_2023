@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Account form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/FrontEnd/LoginPage/LoginPage.css">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/48107e415f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bellota:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+root{
+    --primary:#FE633D;
+    --primaryDarker: #c14b2e;
+    --secondary:#227bcf;
+    --dark: #202046;
+    --bright:#FFFFFF;
+    --body: #d5d5d5;
+    --box-shadow: 0 8px 22px rgba(0,0,0,0.8);
+}
+
+body{
+    
+    font-family: 'Sora', sans-serif;
+    line-height: 1.7;
+   
+}
+
+.background{
+    background-image:url(https://i.ibb.co/G38h7RR/Login-page-wallapaper.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 50%;
+}
+
+.background::after{
+    content:"";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(8, 8, 18, 0.8);
+    z-index: -1;
+}
+
+.navbar{
+    font-size: 20px;
+    color: white;
+    box-shadow: var(--box-shadow);
+}
+
+.navbar-brand img {
+    width: 70px;
+    height: auto; 
+  }
+
+  .formBox{
+    background: #fff;
+    padding: 50px 60px 70px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  #title{
+    font-family: 'Sora' , sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+    margin-bottom: 60px;
+    color: #202046;
+    position: relative;
+  }
+
+  #title::after{
+    content: "";
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: #202046;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .inputFeild{
+    background: #d5d5d5;
+    margin: 15px 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+  }
+
+  input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+  }
+
+.inputFeild i{
+    margin-left: 15px;
+    color: grey;
+}
+
+.inputGroup a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #227bcf;
+    transition: 0.5s ease-in-out;
+}
+
+.inputGroup a:hover{
+    color: #202046;
+    transition: 0.5s ease-in-out;
+}
+
+.btnField{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnField button{
+    flex-basis:48%;
+    background: #227bcf;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    transition: background 1;
+}
+
+.inputGroup{
+    height: 400px;
+}
+
+.btnField button.disable{
+    background: #e8eaee;
+    color: grey;
+}
+
+#btnSubmit{
+    margin-top: 30px;
+    width: 200px;
+    background: #227bcf;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    outline: 0;
+    border-width: 3px;
+    border-color: transparent;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#btnSubmit:hover{
+    border-color: #FE633D;
+    color: #FE633D;
+    background: transparent;
+    transition: 0.3s ease-in-out;
+}
+  </style>
+    <nav class="navbar navbar-expand-lg py-8 sticky-top bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="https://i.ibb.co/CvMB5vd/logo-no-background.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav , ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/dashboard">Home</a>
+            </li>
+        </div>
+      </div>
+    </nav>
+      <div class="background vh-100 d-flex align-items-center">
+        <div class="container">
+          <div class="row">
+            <div class="formBox col-lg-7 mx-auto text-center">
+                <h1 id="title">Sign Up</h1>
+                <form>
+                    <div class="inputGroup">
+                        <div class="inputFeild" id="firstNameFeild">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="First Name" id="firstName" name="firstName">
+                        </div>
+                        <div class="inputFeild" id="lastNameFeild">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="Last Name" id="lastName" name="lastName">
+                        </div>
+                        <div class="inputFeild">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" placeholder="Email" id="email" name="email">
+                        </div>
+                        <div class="inputFeild">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Password" id="password" name="password">
+                        </div>
+                    </div>
+                </form>
+                <button type="button" id="btnSubmit">Register</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+<script>
+$(document).ready(function(){    
+    
+      $("#btnSubmit").click(function() {
+        const firstName = $('#firstName').val();
+        const lastName = $('#lastName').val();
+        const email = $('#email').val();
+        const password = $('#password').val();
+
+        const data = {
+          firstName,
+          lastName,
+          email,
+          password,
+        };
+
+        $.ajax({
+          type: "POST",
+          url: '/api/v1/user',
+          data,
+          success: function(serverResponse) {
+            if(serverResponse) {
+              alert('Successfully Registered User');
+              location.href = '/';
+            }
+          },
+          error: function(errorResponse) {
+            if(errorResponse) {
+              alert(`Error Register User: ${errorResponse.responseText}`);
+            }            
+          }
+        });
+      });      
+    });
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+{
+  "name": "se_project",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.0",
+    "boxicons": "^2.1.4",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "hjs": "^0.0.6",
+    "jquery": "^3.7.0",
+    "knex": "^0.95.15",
+    "lodash": "4.17.21",
+    "pg": "^8.7.1",
+    "uuid": "8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "description": "Run npm install to install all dependences \r  npm start to run project",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
