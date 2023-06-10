@@ -68,7 +68,7 @@ module.exports = function(app) {
    
   app.get("/tickets",async function(req,res){
     const user = await getUser(req)
-    const stations = await db.select("*").from("se_project.stations")
+    const stations = await db.select("*").from("se_project.stations").whereNotNull("stationposition")
     const sub = await db.select("*").from("se_project.subsription").where("userid",user.userid).andWhere("nooftickets","<>",0)
     return res.render('ticket',{stations,sub})
   })
